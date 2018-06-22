@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+@mixin toolbar-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .mat-toolbar.mat-primary {
+    background: linear-gradient(to right, mat-color($primary), mat-color($accent)) !important;
+  }
+  .mat-toolbar.mat-accent {
+    background: linear-gradient(to right, mat-color($accent), mat-color($primary)) !important;
+  }
+}
