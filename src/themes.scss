@@ -1,5 +1,7 @@
 @import '~@angular/material/theming';
 @import 'app/toolbar/toolbar-theme';
+@import 'app/app-theme';
+
 @include mat-core();
 
 $mat-turquoise: (
@@ -71,14 +73,16 @@ $mat-gray: (
 $customer-primary: mat-palette($mat-turquoise);
 $customer-accent: mat-palette($mat-gray);
 $customer-warn: mat-palette($mat-red);
-$customer-theme: mat-light-theme($customer-primary, $customer-accent, $customer-warn); // Or mat-dark-theme
+$customer-theme: mat-light-theme($customer-primary, $customer-accent, $customer-warn);
 
 @include angular-material-theme($customer-theme);
 @include toolbar-theme($customer-theme);
+@include app-bg-theme($customer-theme);
 
 .customer {
   @include angular-material-theme($customer-theme);
   @include toolbar-theme($customer-theme);
+  @include app-bg-theme($customer-theme);
 }
 
 $mat-blue: (
@@ -150,11 +154,12 @@ $mat-bluishgray: (
 $agent-primary: mat-palette($mat-blue);
 $agent-accent: mat-palette($mat-bluishgray);
 $agent-warn: mat-palette($mat-red);
-$agent-theme: mat-dark-theme($agent-primary, $agent-accent, $agent-warn);
+$agent-theme: mat-light-theme($agent-primary, $agent-accent, $agent-warn);
 
 .agent {
   @include angular-material-theme($agent-theme);
   @include toolbar-theme($agent-theme);
+  @include app-bg-theme($agent-theme);
 }
 
 $mat-mauve: (
@@ -226,9 +231,10 @@ $mat-mauvelight: (
 $cc-primary: mat-palette($mat-mauve);
 $cc-accent: mat-palette($mat-mauvelight);
 $cc-warn: mat-palette($mat-red);
-$cc-theme: mat-dark-theme($cc-primary, $cc-accent, $cc-warn);
+$cc-theme: mat-light-theme($cc-primary, $cc-accent, $cc-warn);
 
 .cc {
   @include angular-material-theme($cc-theme);
   @include toolbar-theme($cc-theme);
+  @include app-bg-theme($cc-theme);
 }

@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@mixin app-bg-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .mat-app-background {
+    background: linear-gradient(to bottom right, mat-color($primary, 50), mat-color($primary, 900)) !important;
+    height: 100vh;
+    widows: 100vw;
+  }
+}
