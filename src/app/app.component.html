@@ -1,1 +1,5 @@
-<app-toolbar></app-toolbar>
+<div [className]="theme | async">
+  <div class="mat-app-background">
+    <app-toolbar></app-toolbar>
+  </div>
+</div>

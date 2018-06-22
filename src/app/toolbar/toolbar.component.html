@@ -1,5 +1,13 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <h1>Theme Demo</h1>
+
+    <mat-form-field>
+      <mat-select placeholder="Select Theme" [(value)]="theme" (selectionChange)="setTheme($event.value)" >
+        <mat-option value="customer">Customer</mat-option>
+        <mat-option value="agent">Agent</mat-option>
+        <mat-option value="cc">Contact Center</mat-option>
+      </mat-select>
+    </mat-form-field>
   </mat-toolbar-row>
 </mat-toolbar>
